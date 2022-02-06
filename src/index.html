@@ -57,7 +57,7 @@
           <p
             class=" text-xl font-medium tracking-wide text-center text-white"
           >
-            Update
+            Save
           </p>
         </button>
         <br>
@@ -88,11 +88,11 @@
                 Message
               </th>
               <th class="sticky top-0 px-6 py-3 text-white-900 bg-blue-300">
-                Account No
+                Account Address
               </th>
             </tr>
           </thead>
-          <!-- empty table body will be filled from js -->
+         
           <tbody class="justify-between divide-y bg-blue-100"></tbody>
         </table>
 
@@ -104,14 +104,7 @@
       <br>
       <br>
 
-    <table>
-    <div class="flex flex-row justify-center space-x-40 items-center">
-      <div class="flex flex-col pt-20 pb-10 items-center">
-        <p class="text-xl leading-10 text-dark-500" id="type-label">Balance</p>
-        <p class="text-5xl leading-10 text-dark-500" id="balance">RM 0.00</p>
-        <p class="text-xl leading-10 text-dark-500" id="bal-ether">ETH 0.00</p>
-      </div>
-    </table>
+    
 
     </div>
     <hr>
@@ -153,7 +146,7 @@
         
       >
         <p class="text-xl leading-10 text-green-500">Current Threshold</p>
-        <p class="text-4xl leading-10 text-green-500" id="threshold">ETH 0.00</p>
+        <p class="text-4xl leading-10 text-green-500" id="threshold">0.00</p>
        
       </div>
     </div>
@@ -179,12 +172,10 @@
                 <th class="sticky top-0 px-6 py-3 text-white-900 bg-blue-300">
                   Amount
                 </th>
-                <th class="sticky top-0 px-6 py-3 text-white-900 bg-blue-300">
-                  TimeStamp (Malaysia Time)
-                </th>
+               
               </tr>
             </thead>
-            <!-- empty table body will be filled from js -->
+            
             <tbody class="justify-between divide-y bg-blue-100"></tbody>
           </table>
         </div>
@@ -198,11 +189,11 @@
             <thead class="justify-between">
               <tr>
                 <th class="sticky top-0 px-6 py-3 text-white-900 bg-blue-300">
-                  Account Number
+                  Account Address
                 </th>
               </tr>
             </thead>
-            <!-- empty table body will be filled from js -->
+           
             <tbody class="justify-between divide-y bg-red-100"></tbody>
           </table>
         </div>
@@ -213,6 +204,16 @@
   <br>
   <br>
   <hr>
+
+  <table>
+    <div class="flex flex-row justify-center space-x-40 items-center">
+      <div class="flex flex-col pt-20 pb-10 items-center">
+        <p class="text-xl leading-10 text-dark-500" id="type-label">Balance</p>
+        <p class="text-xl leading-10 text-dark-500" id="bal-ether">0.00</p>
+      </div>
+    </table>
+
+    <hr>
     <div id="customer" class="">
       <div class="flex flex-row space-x-3 pt-20 items-center justify-center">
         <span
