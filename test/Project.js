@@ -1,13 +1,13 @@
 const Project = artifacts.require("Project");
 
-// one extra test for good measures
+
 contract("Project", (accounts) => {
-  let project; // the bank
+  let project; 
   // shorten commonly used functions
   let toWei = web3.utils.toWei;
   let fromWei = web3.utils.fromWei;
   before(async () => {
-    project = await Project.deployed(); // get bank instance
+    project = await Project.deployed(); //instance
   });
 
   it("should set threashold successfully", async () => {
