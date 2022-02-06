@@ -83,9 +83,9 @@ App = {
 
   
   // get all instances of above threshold limit event
-  getAboveThresholdLimit: async () => {
+  getAboveThresholdLimitTransaction: async () => {
     await App.project
-      .AboveThresholdLimit({}, { fromBlock: 0, toBlock: "latest" })
+      .AboveThresholdLimitTransaction({}, { fromBlock: 0, toBlock: "latest" })
       .get(async (error, result) => {
         if ((result != null) & !error) {
           for (var key in result) {
@@ -126,7 +126,7 @@ App = {
       // set threshold amount
       thres = await App.getThreshold();
       $("#threshold").html('${App.web3.fromWei(thres)}');
-      $("#thres-rm").html('${App.formatMoney(thres)}');
+      
 
       $("#update-threshold").click(() => {
         new_val = $("#thres-val").val();
@@ -185,8 +185,7 @@ App = {
     App.loading = false;
   },
   setBalance: async () => {
-    bal_wei = await App.getBalance();
-    $("#balance").html('${App.formatMoney(bal_wei)}');
+    bal_wei = await App.getBalance()
     $("#bal-ether").html('${App.web3.fromWei(bal_wei, "ether")}');
   },
 
