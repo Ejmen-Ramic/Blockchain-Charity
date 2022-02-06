@@ -48,7 +48,7 @@ contract Project {
             return donateeList;
         }
         
-    //Q3:
+    
     
         uint256 public threshold;
         uint256 max;
@@ -89,7 +89,7 @@ contract Project {
         }
     
         // Emitted when the donation amount > threshold
-        event AboveLimitTransaction(
+        event AboveThresholdLimitTransaction(
             string message,
             address donorAddress,
             uint256 amount
@@ -99,7 +99,7 @@ contract Project {
                 if(amount > 0){
                     if(amount > threshold){
                               // emitted when a donation amount > threshold
-                        emit AboveLimitTransaction(
+                        emit AboveThresholdLimitTransaction(
                     "Your donation amount is above the threshold! ", //message
                     msg.sender, //account address
                     amount //amount
@@ -111,17 +111,14 @@ contract Project {
                 
         } 
     
-    
-    //Ejmen part: Q3, b part
-    
-    // Defining a constructor   
+      
          
     
         function withdraw(uint256 amount) public payable /*OnlyDonor*/{
                 if(amount > 0){
                     if(amount > threshold){
-                        emit AboveLimitTransaction(
-                    "Your withdrawl amount is above the threshold! ",
+                        emit AboveThresholdLimitTransaction(
+                    "Your withdrawl amount is above the balance! ",
                     msg.sender,
                     amount
                 );
